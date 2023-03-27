@@ -8,6 +8,10 @@
 import Foundation
 
 struct SerchResults: Codable {
+    let results: SerchResult
+}
+
+struct SerchResult: Codable {
     let resultsAvailable: Int
     let shop: [Shop]
 }

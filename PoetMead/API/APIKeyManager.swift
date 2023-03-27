@@ -7,6 +7,10 @@
 
 import Foundation
 struct APIKeyManager {
+    enum APIKeyError: Error {
+        case NotFound
+    }
+
     private let keyFilePath = Bundle.main.path(forResource: "APIKey", ofType: "plist")
 
     private func getKeys() -> NSDictionary? {
@@ -16,11 +20,12 @@ struct APIKeyManager {
         return NSDictionary(contentsOfFile: keyFilePath)
     }
 
-    func getAPIKey(keyName: String) -> String? {
+    func getAPIKey(keyName: String) -> String {
         guard let keys = getKeys() else {
-            return nil
+            print("APIKeyを読み込めませんでした")
+            return ""
         }
 
-        return keys[keyName]! as? String
+        return keys[keyName] as! String
     }
 }
