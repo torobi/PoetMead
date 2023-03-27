@@ -8,19 +8,19 @@
 import Foundation
 
 class GourmetSearchAPI {
-    private var apiKey: String = String()
+    private let apiKey = APIKeyManager().getAPIKey(keyName: "gourmetSearchApiKey")
     private let baseUrl: String = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
-    
+
     private static var task: URLSessionTask?
-        
+
     enum SearchRestaurantError: Error {
         case wrong
         case network
         case parse
     }
-    
-    static func searchRestaurant(lat: Double, lng: Double, completionHandler: @escaping (Result<[SerchResults], SearchRestaurantError>) -> Void){
-        
-        
+
+    static func searchRestaurant(lat: Double,
+                                 lng: Double,
+                                 completionHandler: @escaping (Result<[SerchResults], SearchRestaurantError>) -> Void) {
     }
 }

@@ -1,5 +1,5 @@
 //
-//  shop.swift
+//  SerchResults.swift
 //  PoetMead
 //
 //  Created by torobi on 2023/03/27.
@@ -20,7 +20,7 @@ struct Shop: Codable {
     let access: String
     let open: String
     let photo: Photo
-    
+
     var logoImageUrl: URL? {
         return URL(string: logoImage)
     }
@@ -28,10 +28,10 @@ struct Shop: Codable {
 
 struct Photo: Codable {
     struct Mobile: Codable {
-        let l: String
-        let s: String
+        let l: String // swiftlint:disable:this identifier_name
+        let s: String // swiftlint:disable:this identifier_name
     }
-    
+
     private let mobile: Mobile
     var largeImageUrl: URL? {
         return URL(string: mobile.l)

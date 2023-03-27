@@ -15,6 +15,8 @@
 		91FD902629D175790076AFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FD902429D175790076AFF9 /* LaunchScreen.storyboard */; };
 		91FD903329D18EA40076AFF9 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD903229D18EA40076AFF9 /* SearchResults.swift */; };
 		91FD903629D194490076AFF9 /* GourmetSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD903529D194490076AFF9 /* GourmetSearchAPI.swift */; };
+		91FD903A29D1A19F0076AFF9 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FD903929D1A19F0076AFF9 /* APIKey.plist */; };
+		91FD903C29D1A52F0076AFF9 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD903B29D1A52F0076AFF9 /* APIKeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		91FD903029D178BE0076AFF9 /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BuildTools; sourceTree = "<group>"; };
 		91FD903229D18EA40076AFF9 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		91FD903529D194490076AFF9 /* GourmetSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetSearchAPI.swift; sourceTree = "<group>"; };
+		91FD903929D1A19F0076AFF9 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		91FD903B29D1A52F0076AFF9 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				91FD903529D194490076AFF9 /* GourmetSearchAPI.swift */,
+				91FD903929D1A19F0076AFF9 /* APIKey.plist */,
+				91FD903B29D1A52F0076AFF9 /* APIKeyManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91FD902629D175790076AFF9 /* LaunchScreen.storyboard in Resources */,
+				91FD903A29D1A19F0076AFF9 /* APIKey.plist in Resources */,
 				91FD902329D175790076AFF9 /* Assets.xcassets in Resources */,
 				91FD902129D175780076AFF9 /* Main.storyboard in Resources */,
 			);
@@ -192,7 +199,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xcrun --sdk macosx swift build -c release \\\n--package-path ./BuildTools/.build/checkouts/SwiftLint \\\n--product swiftlint\n\n./BuildTools/.build/checkouts/SwiftLint/.build/release/swiftlint lint --config $SRCROOT/.swiftlint.yml\n";
+			shellScript = "xcrun --sdk macosx swift build -c release \\\n--package-path ./BuildTools/.build/checkouts/SwiftLint \\\n--product swiftlint\n\n./BuildTools/.build/checkouts/SwiftLint/.build/release/swiftlint --fix lint --config $SRCROOT/.swiftlint.yml\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -201,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FD903C29D1A52F0076AFF9 /* APIKeyManager.swift in Sources */,
 				91FD903629D194490076AFF9 /* GourmetSearchAPI.swift in Sources */,
 				91FD901E29D175780076AFF9 /* ViewController.swift in Sources */,
 				91FD901A29D175780076AFF9 /* AppDelegate.swift in Sources */,
