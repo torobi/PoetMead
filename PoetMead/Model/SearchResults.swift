@@ -1,5 +1,5 @@
 //
-//  SerchResults.swift
+//  SearchResults.swift
 //  PoetMead
 //
 //  Created by torobi on 2023/03/27.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SerchResults: Codable {
-    let results: SerchResult
+struct SearchResults: Codable {
+    let results: SearchResult
 }
 
-struct SerchResult: Codable {
+struct SearchResult: Codable {
     let resultsAvailable: Int
     let shop: [Shop]
 }

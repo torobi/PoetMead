@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		91FD901A29D175780076AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901929D175780076AFF9 /* AppDelegate.swift */; };
 		91FD901C29D175780076AFF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901B29D175780076AFF9 /* SceneDelegate.swift */; };
-		91FD901E29D175780076AFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901D29D175780076AFF9 /* ViewController.swift */; };
+		91FD901E29D175780076AFF9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901D29D175780076AFF9 /* SearchViewController.swift */; };
 		91FD902129D175780076AFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FD901F29D175780076AFF9 /* Main.storyboard */; };
 		91FD902329D175790076AFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FD902229D175790076AFF9 /* Assets.xcassets */; };
 		91FD902629D175790076AFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FD902429D175790076AFF9 /* LaunchScreen.storyboard */; };
@@ -18,13 +18,19 @@
 		91FD903A29D1A19F0076AFF9 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91FD903929D1A19F0076AFF9 /* APIKey.plist */; };
 		91FD903C29D1A52F0076AFF9 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD903B29D1A52F0076AFF9 /* APIKeyManager.swift */; };
 		91FD904129D1B82E0076AFF9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 91FD904029D1B82E0076AFF9 /* Alamofire */; };
+		91FD904A29D2A59D0076AFF9 /* SearchRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD904929D2A59D0076AFF9 /* SearchRange.swift */; };
+		91FD905229D2C1770076AFF9 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD905129D2C1770076AFF9 /* SearchResultViewController.swift */; };
+		91FD905429D2C1C90076AFF9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD905329D2C1C90076AFF9 /* DetailViewController.swift */; };
+		91FD905729D41ED10076AFF9 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD905529D41ED10076AFF9 /* RangeSlider.swift */; };
+		91FD905829D41ED10076AFF9 /* RangeSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FD905629D41ED10076AFF9 /* RangeSlider.xib */; };
+		91FD906229D518FD0076AFF9 /* UINibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD906129D518FD0076AFF9 /* UINibView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91FD901629D175780076AFF9 /* PoetMead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoetMead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FD901929D175780076AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FD901B29D175780076AFF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91FD901D29D175780076AFF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91FD901D29D175780076AFF9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		91FD902029D175780076AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91FD902229D175790076AFF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91FD902529D175790076AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +40,12 @@
 		91FD903929D1A19F0076AFF9 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		91FD903B29D1A52F0076AFF9 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
 		91FD904229D1B8A60076AFF9 /* BuildTools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BuildTools; path = ../BuildTools; sourceTree = "<group>"; };
+		91FD904929D2A59D0076AFF9 /* SearchRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRange.swift; sourceTree = "<group>"; };
+		91FD905129D2C1770076AFF9 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		91FD905329D2C1C90076AFF9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		91FD905529D41ED10076AFF9 /* RangeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		91FD905629D41ED10076AFF9 /* RangeSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RangeSlider.xib; sourceTree = "<group>"; };
+		91FD906129D518FD0076AFF9 /* UINibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINibView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +83,9 @@
 				91FD903129D18E960076AFF9 /* Model */,
 				91FD901929D175780076AFF9 /* AppDelegate.swift */,
 				91FD901B29D175780076AFF9 /* SceneDelegate.swift */,
+				91FD904629D2A41A0076AFF9 /* View */,
 				91FD903429D194130076AFF9 /* API */,
-				91FD901D29D175780076AFF9 /* ViewController.swift */,
+				91FD904329D29FB30076AFF9 /* Controller */,
 				91FD901F29D175780076AFF9 /* Main.storyboard */,
 				91FD902229D175790076AFF9 /* Assets.xcassets */,
 				91FD902429D175790076AFF9 /* LaunchScreen.storyboard */,
@@ -85,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				91FD903229D18EA40076AFF9 /* SearchResults.swift */,
+				91FD904929D2A59D0076AFF9 /* SearchRange.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +111,42 @@
 				91FD903B29D1A52F0076AFF9 /* APIKeyManager.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		91FD904329D29FB30076AFF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91FD901D29D175780076AFF9 /* SearchViewController.swift */,
+				91FD905329D2C1C90076AFF9 /* DetailViewController.swift */,
+				91FD905129D2C1770076AFF9 /* SearchResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		91FD904629D2A41A0076AFF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91FD906029D518DB0076AFF9 /* Utils */,
+				91FD905929D49E950076AFF9 /* RangeSlider */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91FD905929D49E950076AFF9 /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				91FD905529D41ED10076AFF9 /* RangeSlider.swift */,
+				91FD905629D41ED10076AFF9 /* RangeSlider.xib */,
+			);
+			path = RangeSlider;
+			sourceTree = "<group>";
+		};
+		91FD906029D518DB0076AFF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				91FD906129D518FD0076AFF9 /* UINibView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FD905829D41ED10076AFF9 /* RangeSlider.xib in Resources */,
 				91FD902629D175790076AFF9 /* LaunchScreen.storyboard in Resources */,
 				91FD903A29D1A19F0076AFF9 /* APIKey.plist in Resources */,
 				91FD902329D175790076AFF9 /* Assets.xcassets in Resources */,
@@ -216,12 +267,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FD905429D2C1C90076AFF9 /* DetailViewController.swift in Sources */,
 				91FD903C29D1A52F0076AFF9 /* APIKeyManager.swift in Sources */,
 				91FD903629D194490076AFF9 /* GourmetSearchAPI.swift in Sources */,
-				91FD901E29D175780076AFF9 /* ViewController.swift in Sources */,
+				91FD901E29D175780076AFF9 /* SearchViewController.swift in Sources */,
 				91FD901A29D175780076AFF9 /* AppDelegate.swift in Sources */,
 				91FD901C29D175780076AFF9 /* SceneDelegate.swift in Sources */,
+				91FD905729D41ED10076AFF9 /* RangeSlider.swift in Sources */,
+				91FD906229D518FD0076AFF9 /* UINibView.swift in Sources */,
 				91FD903329D18EA40076AFF9 /* SearchResults.swift in Sources */,
+				91FD905229D2C1770076AFF9 /* SearchResultViewController.swift in Sources */,
+				91FD904A29D2A59D0076AFF9 /* SearchRange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

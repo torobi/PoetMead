@@ -23,7 +23,7 @@ class GourmetSearchAPI {
     func searchRestaurant(latitude: Double,
                                  longitude: Double,
                                  range: Int,
-                                 completionHandler: @escaping (Result<[SerchResults], SearchRestaurantError>) -> Void) {
+                                 completionHandler: @escaping (Result<[SearchResults], SearchRestaurantError>) -> Void) {
         let parameters = ["key": self.apiKey,
                           "format": "json",
                           "lat": latitude,
@@ -33,7 +33,7 @@ class GourmetSearchAPI {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         AF.request(baseUrl, method: .get, parameters: parameters)
-            .responseDecodable(of: SerchResults.self, decoder: decoder) { response in
+            .responseDecodable(of: SearchResults.self, decoder: decoder) { response in
                 switch response.result {
                 case .success:
                     if let serchResults = response.value {
