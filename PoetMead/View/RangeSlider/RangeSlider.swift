@@ -8,7 +8,7 @@
 import UIKit
 
 class RangeSlider: UINibView {
-    private let rangeIndex = 0
+    private (set) var rangeIndex = 0
 
     @IBOutlet var label: UILabel!
     @IBOutlet var cells: [UIButton]!
@@ -28,6 +28,7 @@ class RangeSlider: UINibView {
             cells[i].layer.cornerRadius = 2
             deactivateCell(index: i)
             cells[i].addAction(.init {_ in
+                self.rangeIndex = i
                 self.updateCell(value: i)
                 self.updateLabel(rangeIndex: i)
             }, for: .touchDown)
