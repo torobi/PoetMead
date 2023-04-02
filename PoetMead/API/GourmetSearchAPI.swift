@@ -39,17 +39,11 @@ class GourmetSearchAPI {
     private let apiKey = APIKeyManager().getAPIKey(keyName: "gourmetSearchApiKey")
     private let baseUrl: String = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
 
-    enum SearchRestaurantError: Error {
-        case wrong
-        case network
-        case parse
-    }
-
     func searchRestaurant(latitude: Double,
                           longitude: Double,
                           range: Int,
                           genre: GourmetGenre,
-                          completionHandler: @escaping (Result<[SearchResults], SearchRestaurantError>) -> Void) {
+                          completionHandler: @escaping (Result<SearchResult, AFError>) -> Void) {
         let parameters = ["key": self.apiKey,
                           "format": "json",
                           "lat": latitude,
@@ -57,7 +51,6 @@ class GourmetSearchAPI {
                           "range": rangeValueToQueryStr(range),
                           "genre": genreParam(genre)
                          ] as [String: Any]
-        print(parameters)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
@@ -65,13 +58,15 @@ class GourmetSearchAPI {
             .responseDecodable(of: SearchResults.self, decoder: decoder) { response in
                 switch response.result {
                 case .success:
-                    if let serchResults = response.value {
-                        print("results: \(serchResults)")
+                    if let searchResults = response.value {
+                        completionHandler(.success(searchResults.results))
                     } else {
                         print("results is nil")
+                        completionHandler(.failure(.responseValidationFailed(reason: .dataFileNil)))
                     }
                 case .failure(let error):
                     print(error)
+                    completionHandler(.failure(error))
                 }
             }
     }
