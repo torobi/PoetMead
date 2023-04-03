@@ -21,7 +21,8 @@ struct Shop: Codable {
     let name: String
     let logoImage: String
     let address: String
-    let access: String
+    let mobileAccess: String
+    let `catch`: String
     let open: String
     let photo: Photo
 

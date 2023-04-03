@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         location.startUpdatingLocation()
         loadingView.setDescription(discription: "検索中…")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     @IBAction func searchRestaurant(_ sender: UIButton) {
@@ -46,7 +47,6 @@ class SearchViewController: UIViewController {
                 switch searchResult {
                 case .success(let result):
                     self.transitionToResultView(searchResult: result)
-                    break
                 case .failure:
                     self.appearSearchFailureAlert()
                 }
@@ -69,6 +69,7 @@ class SearchViewController: UIViewController {
 
     private func transitionToResultView(searchResult: SearchResult) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "result") as! SearchResultViewController
+        vc.setShops(searchResult.shop)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

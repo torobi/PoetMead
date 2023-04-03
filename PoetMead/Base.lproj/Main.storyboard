@@ -17,10 +17,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="JZt-5M-L5e" customClass="RangeSlider" customModule="PoetMead" customModuleProvider="target">
-                                <rect key="frame" x="40" y="775" width="350" height="63"/>
+                                <rect key="frame" x="92" y="775" width="246" height="63"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="fXZ-E6-fEd"/>
+                                    <constraint firstAttribute="width" constant="246" id="mbE-MX-7ud"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5d-5o-SNV" userLabel="Restaurant">
@@ -55,11 +56,8 @@
                             <constraint firstItem="Jb8-5p-IUX" firstAttribute="leading" secondItem="G5d-5o-SNV" secondAttribute="trailing" constant="36" id="906-Os-Z4Y"/>
                             <constraint firstItem="MEn-Rc-kLg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="254" id="9Gb-LG-pJq"/>
                             <constraint firstItem="Jb8-5p-IUX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AUK-dk-T8w"/>
-                            <constraint firstItem="Jb8-5p-IUX" firstAttribute="centerX" secondItem="JZt-5M-L5e" secondAttribute="centerX" id="KAN-Og-gR5"/>
                             <constraint firstItem="JZt-5M-L5e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kpk-gX-xep"/>
                             <constraint firstItem="Jb8-5p-IUX" firstAttribute="centerY" secondItem="G5d-5o-SNV" secondAttribute="centerY" id="MpJ-sY-Ofs"/>
-                            <constraint firstItem="Jb8-5p-IUX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mxu-4e-R7l"/>
-                            <constraint firstItem="JZt-5M-L5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Qqp-l8-BBM"/>
                             <constraint firstItem="MEn-Rc-kLg" firstAttribute="leading" secondItem="Jb8-5p-IUX" secondAttribute="trailing" constant="36" id="TE0-mS-auB"/>
                             <constraint firstItem="MEn-Rc-kLg" firstAttribute="centerY" secondItem="G5d-5o-SNV" secondAttribute="centerY" id="XSI-7q-FL5"/>
                         </constraints>
@@ -81,110 +79,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RCT-Pl-3Kc">
-                                <rect key="frame" x="0.0" y="92" width="430" height="754"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RCT-Pl-3Kc">
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="266" id="zaO-gn-Ivb">
-                                        <rect key="frame" x="0.0" y="50" width="430" height="266"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zaO-gn-Ivb" id="R4m-Yq-7VB">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="266"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="yams.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qh2-kj-Tfo">
-                                                    <rect key="frame" x="29" y="66" width="122" height="122"/>
-                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="わらやき道場 新橋駅前店" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0C-j6-oTf">
-                                                    <rect key="frame" x="29" y="25" width="195" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="新橋駅徒歩1分!最大3時間飲み放題付ｺｰｽは3000円～" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu6-az-s8T">
-                                                    <rect key="frame" x="188" y="40" width="222" height="85"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3000円 ※3時間飲み放題付食べ放題コース2500円～" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnY-Pf-h02">
-                                                    <rect key="frame" x="188" y="121" width="222" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="新橋駅徒歩1分!最大3時間飲み放題付ｺｰｽは3000円～" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmV-Vi-Gpy">
-                                                    <rect key="frame" x="14" y="197" width="402" height="58"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Nu6-az-s8T" firstAttribute="leading" secondItem="Qh2-kj-Tfo" secondAttribute="trailing" constant="10" id="FtP-GR-iLC"/>
-                                                <constraint firstItem="jmV-Vi-Gpy" firstAttribute="trailing" secondItem="R4m-Yq-7VB" secondAttribute="trailingMargin" constant="6" id="RNR-hS-R4E"/>
-                                                <constraint firstItem="Qh2-kj-Tfo" firstAttribute="leading" secondItem="R4m-Yq-7VB" secondAttribute="leadingMargin" id="o1j-0e-DeX"/>
-                                                <constraint firstAttribute="trailing" secondItem="Nu6-az-s8T" secondAttribute="trailing" constant="5" id="pNk-pA-Ud1"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="266" id="Yub-dN-d1z">
-                                        <rect key="frame" x="0.0" y="316" width="430" height="266"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yub-dN-d1z" id="kZH-9v-QSo">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="266"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="yams.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Z4A-q5-dWZ">
-                                                    <rect key="frame" x="29" y="66" width="122" height="122"/>
-                                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="わらやき道場 新橋駅前店" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWe-3W-OnP">
-                                                    <rect key="frame" x="29" y="25" width="195" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="新橋駅徒歩1分!最大3時間飲み放題付ｺｰｽは3000円～" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOs-FZ-vWN">
-                                                    <rect key="frame" x="188" y="40" width="222" height="85"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3000円 ※3時間飲み放題付食べ放題コース2500円～" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-c1-jNP">
-                                                    <rect key="frame" x="188" y="121" width="222" height="41"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="新橋駅徒歩1分!最大3時間飲み放題付ｺｰｽは3000円～" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyM-JM-yju">
-                                                    <rect key="frame" x="16" y="188" width="402" height="58"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="IyM-JM-yju" firstAttribute="trailing" secondItem="kZH-9v-QSo" secondAttribute="trailingMargin" constant="8" id="7g0-bz-Hpf"/>
-                                                <constraint firstAttribute="trailing" secondItem="UOs-FZ-vWN" secondAttribute="trailing" constant="5" id="UNn-Xz-TT5"/>
-                                                <constraint firstItem="Z4A-q5-dWZ" firstAttribute="leading" secondItem="kZH-9v-QSo" secondAttribute="leadingMargin" id="dU5-CU-Yd5"/>
-                                                <constraint firstItem="UOs-FZ-vWN" firstAttribute="leading" secondItem="Z4A-q5-dWZ" secondAttribute="trailing" constant="10" id="gmC-Rx-SWe"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O55-UH-c5V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="top" secondItem="O55-UH-c5V" secondAttribute="top" id="0zO-tN-845"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="trailing" secondItem="O55-UH-c5V" secondAttribute="trailing" id="J2u-eK-YQ1"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="bottom" secondItem="O55-UH-c5V" secondAttribute="bottom" id="NcL-gi-xRR"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="leading" secondItem="O55-UH-c5V" secondAttribute="leading" id="Vgh-DA-2gG"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="top" secondItem="O55-UH-c5V" secondAttribute="top" id="W3S-yt-BhP"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="bottom" secondItem="O55-UH-c5V" secondAttribute="bottom" id="XCy-H2-br6"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="centerX" secondItem="iAy-Ko-HJj" secondAttribute="centerX" id="iyS-PC-1c0"/>
+                            <constraint firstItem="RCT-Pl-3Kc" firstAttribute="leading" secondItem="O55-UH-c5V" secondAttribute="leading" id="p8y-P2-uc4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IqJ-Gg-AaC"/>
+                    <connections>
+                        <outlet property="searchResultTable" destination="RCT-Pl-3Kc" id="8Jp-JD-JMv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDf-jl-cYm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,15 +144,11 @@
         <image name="beer" width="40" height="55"/>
         <image name="cutlery" width="43" height="64"/>
         <image name="iceCream" width="36" height="67"/>
-        <image name="yams.jpg" width="1280" height="853"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
