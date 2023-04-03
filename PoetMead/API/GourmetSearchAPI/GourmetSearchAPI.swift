@@ -8,6 +8,14 @@
 import Alamofire
 import Foundation
 
+protocol GourmetSearchAPIProtocol {
+    func searchRestaurant(latitude: Double,
+                          longitude: Double,
+                          range: Int,
+                          genre: GourmetGenre,
+                          completionHandler: @escaping (Result<SearchResult, AFError>) -> Void)
+}
+
 private enum APIGourmeGenre: String {
     case pub = "G001"
     case diningBar_bal = "G002"
@@ -35,7 +43,7 @@ enum GourmetGenre: String {
     case sweets = "G014"
 }
 
-class GourmetSearchAPI {
+class GourmetSearchAPI: GourmetSearchAPIProtocol {
     private let apiKey = APIKeyManager().getAPIKey(keyName: "gourmetSearchApiKey")
     private let baseUrl: String = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
 

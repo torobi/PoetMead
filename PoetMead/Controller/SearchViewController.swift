@@ -9,7 +9,7 @@ import CoreLocation
 import UIKit
 
 class SearchViewController: UIViewController {
-    private let searchAPI = GourmetSearchAPI()
+    private let searchAPI: GourmetSearchAPIProtocol = MockGourmetSearchAPI()
     private let location = Location()
     private let loadingView = LoadingView()
 
