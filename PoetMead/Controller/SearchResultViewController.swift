@@ -5,6 +5,7 @@
 //  Created by torobi on 2023/03/28.
 //
 
+import MapKit
 import UIKit
 
 class SearchResultViewController: UIViewController {
@@ -18,11 +19,17 @@ class SearchResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupNavigationItem()
+    }
+
+    private func setupNavigationItem() {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
 
-extension SearchResultViewController: UITableViewDataSource {
+extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate {
     func setupTableView() {
+        searchResultTable.delegate = self
         searchResultTable.dataSource = self
         searchResultTable.register(UINib(nibName: SearchResultCell.className, bundle: nil), forCellReuseIdentifier: SearchResultCell.cellReuseIdentifier)
     }
@@ -36,5 +43,16 @@ extension SearchResultViewController: UITableViewDataSource {
         cell.setContent(shop: shops[indexPath.row])
 
         return cell
+    }
+
+    // セルタップ時の挙動
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        transitionToDetailView(shop: shops[indexPath.row])
+    }
+
+    private func transitionToDetailView(shop: Shop) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        vc.setContent(shop: shop)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -9,17 +9,6 @@ import CoreLocation
 import UIKit
 
 class SearchViewController: UIViewController {
-    private let searchAPI: GourmetSearchAPIProtocol = MockGourmetSearchAPI()
-    private let location = Location()
-    private let loadingView = LoadingView()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        location.startUpdatingLocation()
-        loadingView.setDescription(discription: "検索中…")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
-
     @IBAction func searchRestaurant(_ sender: UIButton) {
         search(genre: .restaurant)
     }
@@ -33,6 +22,21 @@ class SearchViewController: UIViewController {
     }
 
     @IBOutlet var rangeSlider: RangeSlider!
+
+    private let searchAPI: GourmetSearchAPIProtocol = MockGourmetSearchAPI()
+    private let location = Location()
+    private let loadingView = LoadingView()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        location.startUpdatingLocation()
+        loadingView.setDescription(discription: "検索中…")
+        setupNavigationItem()
+    }
+
+    private func setupNavigationItem() {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 
     private func search(genre: GourmetGenre) {
         appearLoadingView()

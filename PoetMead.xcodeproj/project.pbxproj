@@ -15,6 +15,8 @@
 		9186E57029D9EAC700309210 /* FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9186E56F29D9EAC700309210 /* FetchImage.swift */; };
 		91AFCC9129DAA8FD00C580FC /* MockGourmetSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCC9029DAA8FD00C580FC /* MockGourmetSearchAPI.swift */; };
 		91AFCC9629DAABC700C580FC /* gourmetSearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 91AFCC9529DAABC700C580FC /* gourmetSearchResponse.json */; };
+		91AFCC9A29DB2FDC00C580FC /* ShopMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCC9929DB2FDC00C580FC /* ShopMap.swift */; };
+		91AFCC9C29DB2FEF00C580FC /* ShopMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AFCC9B29DB2FEF00C580FC /* ShopMap.xib */; };
 		91FD901A29D175780076AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901929D175780076AFF9 /* AppDelegate.swift */; };
 		91FD901C29D175780076AFF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901B29D175780076AFF9 /* SceneDelegate.swift */; };
 		91FD901E29D175780076AFF9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901D29D175780076AFF9 /* SearchViewController.swift */; };
@@ -43,6 +45,8 @@
 		9186E56F29D9EAC700309210 /* FetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImage.swift; sourceTree = "<group>"; };
 		91AFCC9029DAA8FD00C580FC /* MockGourmetSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGourmetSearchAPI.swift; sourceTree = "<group>"; };
 		91AFCC9529DAABC700C580FC /* gourmetSearchResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gourmetSearchResponse.json; sourceTree = "<group>"; };
+		91AFCC9929DB2FDC00C580FC /* ShopMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMap.swift; sourceTree = "<group>"; };
+		91AFCC9B29DB2FEF00C580FC /* ShopMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopMap.xib; sourceTree = "<group>"; };
 		91FD901629D175780076AFF9 /* PoetMead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoetMead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FD901929D175780076AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FD901B29D175780076AFF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 			path = GourmetSearchAPI;
 			sourceTree = "<group>";
 		};
+		91AFCC9829DB2FB800C580FC /* ShopMap */ = {
+			isa = PBXGroup;
+			children = (
+				91AFCC9929DB2FDC00C580FC /* ShopMap.swift */,
+				91AFCC9B29DB2FEF00C580FC /* ShopMap.xib */,
+			);
+			path = ShopMap;
+			sourceTree = "<group>";
+		};
 		91FD900D29D175780076AFF9 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		91FD904629D2A41A0076AFF9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91AFCC9829DB2FB800C580FC /* ShopMap */,
 				9186E56A29D9DB4400309210 /* SearchResultCell */,
 				91FD906029D518DB0076AFF9 /* Utils */,
 				91FD905929D49E950076AFF9 /* RangeSlider */,
@@ -271,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91AFCC9C29DB2FEF00C580FC /* ShopMap.xib in Resources */,
 				91FD905829D41ED10076AFF9 /* RangeSlider.xib in Resources */,
 				91FD902629D175790076AFF9 /* LaunchScreen.storyboard in Resources */,
 				91FD903A29D1A19F0076AFF9 /* APIKey.plist in Resources */,
@@ -335,6 +350,7 @@
 				9186E56429D89BB800309210 /* LoadingView.swift in Sources */,
 				91FD901A29D175780076AFF9 /* AppDelegate.swift in Sources */,
 				9186E56929D97DBB00309210 /* Location.swift in Sources */,
+				91AFCC9A29DB2FDC00C580FC /* ShopMap.swift in Sources */,
 				91FD901C29D175780076AFF9 /* SceneDelegate.swift in Sources */,
 				91FD905729D41ED10076AFF9 /* RangeSlider.swift in Sources */,
 				91FD906229D518FD0076AFF9 /* UINibView.swift in Sources */,

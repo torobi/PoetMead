@@ -5,22 +5,21 @@
 //  Created by torobi on 2023/03/28.
 //
 
+import MapKit
 import UIKit
 
 class DetailViewController: UIViewController {
+    @IBOutlet var mapView: ShopMap!
+
+    private var shop: Shop?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        guard let shop else { return }
+        mapView.setMap(lat: shop.lat, lng: shop.lng, name: shop.name)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setContent(shop: Shop) {
+        self.shop = shop
     }
-    */
 }

@@ -113,13 +113,39 @@
                     <view key="view" contentMode="scaleToFill" id="Tnb-kw-XTJ">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3B-AQ-Oh1" customClass="ShopMap" customModule="PoetMead" customModuleProvider="target">
+                                <rect key="frame" x="19" y="618" width="392" height="240"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Sy4-cr-Bn6"/>
+                                    <constraint firstAttribute="width" constant="392" id="oY7-s1-9Ez"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQw-ds-ocv">
+                                <rect key="frame" x="20" y="572" width="79" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="H8a-hm-DXE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="centerX" secondItem="Tnb-kw-XTJ" secondAttribute="centerX" id="0zt-hZ-gNr"/>
+                            <constraint firstItem="H8a-hm-DXE" firstAttribute="bottom" secondItem="j3B-AQ-Oh1" secondAttribute="bottom" constant="40" id="aKM-Hz-Ddj"/>
+                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="19" id="bRm-bn-98J"/>
+                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="top" secondItem="qQw-ds-ocv" secondAttribute="bottom" constant="20" id="jTy-ZM-nqS"/>
+                            <constraint firstItem="qQw-ds-ocv" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="20" id="lrf-8e-Uv7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="j3B-AQ-Oh1" id="m9p-km-nYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOh-pM-iyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="-3"/>
+            <point key="canvasLocation" x="2859.0697674418602" y="-3.218884120171674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eNJ-AN-KL2">
@@ -144,6 +170,9 @@
         <image name="beer" width="40" height="55"/>
         <image name="cutlery" width="43" height="64"/>
         <image name="iceCream" width="36" height="67"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -25,6 +25,8 @@ struct Shop: Codable {
     let `catch`: String
     let open: String
     let photo: Photo
+    let lat: Double
+    let lng: Double
 
     var logoImageUrl: URL? {
         return URL(string: logoImage)
