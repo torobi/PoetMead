@@ -128,19 +128,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sth-qS-8ch" customClass="ShopDetailTagList" customModule="PoetMead" customModuleProvider="target">
+                                <rect key="frame" x="35" y="430" width="360" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="lJX-8H-c9X"/>
+                                    <constraint firstAttribute="height" constant="100" id="qud-bH-3QG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-25-o7I">
+                                <rect key="frame" x="20" y="384" width="63" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H8a-hm-DXE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="j3B-AQ-Oh1" firstAttribute="centerX" secondItem="Tnb-kw-XTJ" secondAttribute="centerX" id="0zt-hZ-gNr"/>
+                            <constraint firstItem="sth-qS-8ch" firstAttribute="centerX" secondItem="Tnb-kw-XTJ" secondAttribute="centerX" id="ENW-bb-sxS"/>
+                            <constraint firstItem="sth-qS-8ch" firstAttribute="top" secondItem="6Pa-25-o7I" secondAttribute="bottom" constant="20" id="L8A-LA-8u9"/>
                             <constraint firstItem="H8a-hm-DXE" firstAttribute="bottom" secondItem="j3B-AQ-Oh1" secondAttribute="bottom" constant="40" id="aKM-Hz-Ddj"/>
                             <constraint firstItem="j3B-AQ-Oh1" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="19" id="bRm-bn-98J"/>
+                            <constraint firstItem="6Pa-25-o7I" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="20" id="gbG-gV-F1c"/>
                             <constraint firstItem="j3B-AQ-Oh1" firstAttribute="top" secondItem="qQw-ds-ocv" secondAttribute="bottom" constant="20" id="jTy-ZM-nqS"/>
                             <constraint firstItem="qQw-ds-ocv" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="20" id="lrf-8e-Uv7"/>
+                            <constraint firstItem="qQw-ds-ocv" firstAttribute="top" secondItem="sth-qS-8ch" secondAttribute="bottom" constant="42" id="pNp-gm-vAG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="j3B-AQ-Oh1" id="m9p-km-nYF"/>
+                        <outlet property="shopDetailTagList" destination="sth-qS-8ch" id="Lea-EJ-LNG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOh-pM-iyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,6 +194,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

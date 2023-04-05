@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet var mapView: ShopMap!
+    @IBOutlet var shopDetailTagList: ShopDetailTagList!
 
     private var shop: Shop?
 
@@ -17,6 +18,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         guard let shop else { return }
         mapView.setMap(lat: shop.lat, lng: shop.lng, name: shop.name)
+        shopDetailTagList.updateTags(shop: shop)
     }
 
     func setContent(shop: Shop) {

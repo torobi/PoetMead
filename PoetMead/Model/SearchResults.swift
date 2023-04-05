@@ -31,6 +31,17 @@ struct Shop: Codable {
     var logoImageUrl: URL? {
         return URL(string: logoImage)
     }
+
+    // MARK: - Detail
+    let wifi: String
+    let course: String
+    let freeDrink: String
+    let freeFood: String
+    let privateRoom: String
+    let card: String
+    let nonSmoking: String
+    let parking: String
+    let barrierFree: String
 }
 
 struct Photo: Codable {
@@ -46,4 +57,16 @@ struct Photo: Codable {
     var smallImageUrl: URL? {
         return URL(string: mobile.s)
     }
+}
+
+enum ShopDetail: CaseIterable {
+    case wifi
+    case course
+    case freeDrink
+    case freeFood
+    case privateRoom
+    case card
+    case nonSmoking
+    case parking
+    case barrierFree
 }
