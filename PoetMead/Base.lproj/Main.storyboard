@@ -114,51 +114,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3B-AQ-Oh1" customClass="ShopMap" customModule="PoetMead" customModuleProvider="target">
-                                <rect key="frame" x="19" y="618" width="392" height="240"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anz-h4-Uay">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79b-Md-XYe" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="839"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3B-AQ-Oh1" customClass="ShopMap" customModule="PoetMead" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="569" width="390" height="240"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="mTe-5e-NJb"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQw-ds-ocv">
+                                                <rect key="frame" x="20" y="513" width="79" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sth-qS-8ch" customClass="ShopDetailTagList" customModule="PoetMead" customModuleProvider="target">
+                                                <rect key="frame" x="34.333333333333343" y="372" width="361.33333333333326" height="97"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="97" id="Tf2-sS-fWC"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-25-o7I">
+                                                <rect key="frame" x="20" y="316" width="63" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qQw-ds-ocv" firstAttribute="leading" secondItem="79b-Md-XYe" secondAttribute="leading" constant="20" id="3gh-6g-4mJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="j3B-AQ-Oh1" secondAttribute="trailing" constant="20" id="7jp-yi-T2W"/>
+                                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="top" secondItem="qQw-ds-ocv" secondAttribute="bottom" constant="30" id="9Ih-KO-w0i"/>
+                                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="leading" secondItem="79b-Md-XYe" secondAttribute="leading" constant="20" id="AX1-1d-tCL"/>
+                                            <constraint firstItem="sth-qS-8ch" firstAttribute="width" secondItem="79b-Md-XYe" secondAttribute="width" multiplier="0.84" id="Dxr-M2-INF"/>
+                                            <constraint firstItem="6Pa-25-o7I" firstAttribute="top" secondItem="79b-Md-XYe" secondAttribute="top" constant="316" id="bMd-dd-otb"/>
+                                            <constraint firstAttribute="bottom" secondItem="j3B-AQ-Oh1" secondAttribute="bottom" constant="30" id="nfi-Mp-euU"/>
+                                            <constraint firstItem="sth-qS-8ch" firstAttribute="top" secondItem="6Pa-25-o7I" secondAttribute="bottom" constant="30" id="qbI-eT-2XJ"/>
+                                            <constraint firstItem="qQw-ds-ocv" firstAttribute="top" secondItem="sth-qS-8ch" secondAttribute="bottom" constant="44" id="s7V-xx-ecL"/>
+                                            <constraint firstItem="sth-qS-8ch" firstAttribute="centerX" secondItem="79b-Md-XYe" secondAttribute="centerX" id="sX9-ct-Hkw"/>
+                                            <constraint firstItem="6Pa-25-o7I" firstAttribute="leading" secondItem="79b-Md-XYe" secondAttribute="leading" constant="20" id="tUI-UM-bji"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="Sy4-cr-Bn6"/>
-                                    <constraint firstAttribute="width" constant="392" id="oY7-s1-9Ez"/>
+                                    <constraint firstItem="79b-Md-XYe" firstAttribute="trailing" secondItem="68e-Oj-5RC" secondAttribute="trailing" id="Tjv-Lr-WHi"/>
+                                    <constraint firstItem="79b-Md-XYe" firstAttribute="leading" secondItem="68e-Oj-5RC" secondAttribute="leading" id="WgL-U0-pXw"/>
+                                    <constraint firstItem="79b-Md-XYe" firstAttribute="width" secondItem="sdV-vS-KVK" secondAttribute="width" id="fYf-xL-DmE"/>
+                                    <constraint firstItem="79b-Md-XYe" firstAttribute="bottom" secondItem="68e-Oj-5RC" secondAttribute="bottom" id="pD6-3h-eSK"/>
+                                    <constraint firstItem="79b-Md-XYe" firstAttribute="top" secondItem="68e-Oj-5RC" secondAttribute="top" id="uJo-Kk-Q4x"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQw-ds-ocv">
-                                <rect key="frame" x="20" y="572" width="79" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sth-qS-8ch" customClass="ShopDetailTagList" customModule="PoetMead" customModuleProvider="target">
-                                <rect key="frame" x="35" y="430" width="360" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="360" id="lJX-8H-c9X"/>
-                                    <constraint firstAttribute="height" constant="100" id="qud-bH-3QG"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pa-25-o7I">
-                                <rect key="frame" x="20" y="384" width="63" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <viewLayoutGuide key="contentLayoutGuide" id="68e-Oj-5RC"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sdV-vS-KVK"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H8a-hm-DXE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="centerX" secondItem="Tnb-kw-XTJ" secondAttribute="centerX" id="0zt-hZ-gNr"/>
-                            <constraint firstItem="sth-qS-8ch" firstAttribute="centerX" secondItem="Tnb-kw-XTJ" secondAttribute="centerX" id="ENW-bb-sxS"/>
-                            <constraint firstItem="sth-qS-8ch" firstAttribute="top" secondItem="6Pa-25-o7I" secondAttribute="bottom" constant="20" id="L8A-LA-8u9"/>
-                            <constraint firstItem="H8a-hm-DXE" firstAttribute="bottom" secondItem="j3B-AQ-Oh1" secondAttribute="bottom" constant="40" id="aKM-Hz-Ddj"/>
-                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="19" id="bRm-bn-98J"/>
-                            <constraint firstItem="6Pa-25-o7I" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="20" id="gbG-gV-F1c"/>
-                            <constraint firstItem="j3B-AQ-Oh1" firstAttribute="top" secondItem="qQw-ds-ocv" secondAttribute="bottom" constant="20" id="jTy-ZM-nqS"/>
-                            <constraint firstItem="qQw-ds-ocv" firstAttribute="leading" secondItem="H8a-hm-DXE" secondAttribute="leading" constant="20" id="lrf-8e-Uv7"/>
-                            <constraint firstItem="qQw-ds-ocv" firstAttribute="top" secondItem="sth-qS-8ch" secondAttribute="bottom" constant="42" id="pNp-gm-vAG"/>
+                            <constraint firstAttribute="trailing" secondItem="Anz-h4-Uay" secondAttribute="trailing" id="ADS-CW-OPX"/>
+                            <constraint firstAttribute="bottom" secondItem="Anz-h4-Uay" secondAttribute="bottom" id="J5c-XG-4si"/>
+                            <constraint firstItem="Anz-h4-Uay" firstAttribute="top" secondItem="Tnb-kw-XTJ" secondAttribute="top" id="Yo2-cl-994"/>
+                            <constraint firstItem="Anz-h4-Uay" firstAttribute="leading" secondItem="Tnb-kw-XTJ" secondAttribute="leading" id="ol3-cq-RCX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="79b-Md-XYe" id="saR-mX-R1U"/>
                         <outlet property="mapView" destination="j3B-AQ-Oh1" id="m9p-km-nYF"/>
+                        <outlet property="scrollView" destination="Anz-h4-Uay" id="Y77-lv-VUf"/>
                         <outlet property="shopDetailTagList" destination="sth-qS-8ch" id="Lea-EJ-LNG"/>
                     </connections>
                 </viewController>
