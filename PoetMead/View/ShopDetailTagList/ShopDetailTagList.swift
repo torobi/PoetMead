@@ -40,7 +40,7 @@ class ShopDetailTagList: UINibView {
         }
     }
 
-    func tagLabelTextWidth(text: String, font: UIFont, height: CGFloat) -> CGFloat {
+    private func tagLabelTextWidth(text: String, font: UIFont, height: CGFloat) -> CGFloat {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.greatestFiniteMagnitude, height: height))
         label.font = font
         label.text = text
@@ -48,7 +48,7 @@ class ShopDetailTagList: UINibView {
         return label.frame.size.width + TagLabel().tagPadding * 2
     }
 
-    func isActiveTag(tagName: ShopDetail, shop: Shop) -> Bool {
+    private func isActiveTag(tagName: ShopDetail, shop: Shop) -> Bool {
         switch tagName {
         case .wifi: return shop.wifi == "あり"
         case .course: return shop.course == "あり"
@@ -57,22 +57,26 @@ class ShopDetailTagList: UINibView {
         case .privateRoom: return shop.privateRoom == "あり"
         case .card: return shop.card == "利用可"
         case .nonSmoking: return shop.nonSmoking == "全席禁煙"
+        case .charter: return shop.charter == "貸切可"
         case .parking: return shop.parking == "あり"
         case .barrierFree: return shop.barrierFree == "あり"
+        case .pet: return shop.pet == "可"
         }
     }
 
-    func getTageText(tagName: ShopDetail) -> String {
+    private func getTageText(tagName: ShopDetail) -> String {
         switch tagName {
-        case .wifi: return "Wifi"
+        case .wifi: return "Wi-Fi"
         case .course: return "コース"
         case .freeDrink: return "飲み放題"
         case .freeFood: return "食べ放題"
         case .privateRoom: return "個室あり"
         case .card: return "カード払い"
         case .nonSmoking: return "全席禁煙"
+        case .charter: return "貸切可"
         case .parking: return "駐車場"
         case .barrierFree: return "バリアフリー"
+        case .pet: return "ペット可"
         }
     }
 }

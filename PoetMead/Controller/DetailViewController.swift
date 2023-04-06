@@ -22,12 +22,8 @@ class DetailViewController: UIViewController {
         mapView.setMap(lat: shop.lat, lng: shop.lng, name: shop.name)
         shopDetailTagList.updateTags(shop: shop)
 
-        print(scrollView.contentSize)
-        print(contentView.frame.size)
-
         scrollView.contentSize = contentView.frame.size
         scrollView.flashScrollIndicators()
-        print(scrollView.contentSize)
     }
 
     func setContent(shop: Shop) {

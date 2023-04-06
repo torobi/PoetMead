@@ -40,8 +40,10 @@ struct Shop: Codable {
     let privateRoom: String
     let card: String
     let nonSmoking: String
+    let charter: String
     let parking: String
     let barrierFree: String
+    let pet: String
 }
 
 struct Photo: Codable {
@@ -67,6 +69,8 @@ enum ShopDetail: CaseIterable {
     case privateRoom
     case card
     case nonSmoking
+    case charter
     case parking
     case barrierFree
+    case pet
 }
