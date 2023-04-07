@@ -10,6 +10,7 @@
 		911BA4F029DD3D6A00A82C79 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911BA4EF29DD3D6A00A82C79 /* TagLabel.swift */; };
 		9123179729DDE58300B72CE3 /* ShopDetailTagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9123179629DDE58300B72CE3 /* ShopDetailTagList.swift */; };
 		9123179B29DE857100B72CE3 /* ShopDetailTagList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9123179A29DE857100B72CE3 /* ShopDetailTagList.xib */; };
+		9123179D29E06EAA00B72CE3 /* TapAreaExpandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9123179C29E06EAA00B72CE3 /* TapAreaExpandButton.swift */; };
 		9186E56429D89BB800309210 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9186E56329D89BB800309210 /* LoadingView.swift */; };
 		9186E56729D89C8C00309210 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9186E56629D89C8C00309210 /* LoadingView.xib */; };
 		9186E56929D97DBB00309210 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9186E56829D97DBB00309210 /* Location.swift */; };
@@ -43,6 +44,7 @@
 		911BA4EF29DD3D6A00A82C79 /* TagLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
 		9123179629DDE58300B72CE3 /* ShopDetailTagList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailTagList.swift; sourceTree = "<group>"; };
 		9123179A29DE857100B72CE3 /* ShopDetailTagList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailTagList.xib; sourceTree = "<group>"; };
+		9123179C29E06EAA00B72CE3 /* TapAreaExpandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAreaExpandButton.swift; sourceTree = "<group>"; };
 		9186E56329D89BB800309210 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9186E56629D89C8C00309210 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		9186E56829D97DBB00309210 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			children = (
 				91FD906129D518FD0076AFF9 /* UINibView.swift */,
 				911BA4EF29DD3D6A00A82C79 /* TagLabel.swift */,
+				9123179C29E06EAA00B72CE3 /* TapAreaExpandButton.swift */,
 				9186E56F29D9EAC700309210 /* FetchImage.swift */,
 				9186E56529D89C5100309210 /* LoadingView */,
 			);
@@ -361,6 +364,7 @@
 			files = (
 				9186E56C29D9DBAB00309210 /* SearchResultCell.swift in Sources */,
 				91FD905429D2C1C90076AFF9 /* DetailViewController.swift in Sources */,
+				9123179D29E06EAA00B72CE3 /* TapAreaExpandButton.swift in Sources */,
 				91AFCC9129DAA8FD00C580FC /* MockGourmetSearchAPI.swift in Sources */,
 				91FD903C29D1A52F0076AFF9 /* APIKeyManager.swift in Sources */,
 				91FD903629D194490076AFF9 /* GourmetSearchAPI.swift in Sources */,
