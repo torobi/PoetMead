@@ -14,14 +14,47 @@ class DetailViewController: UIViewController {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentView: UIView!
+
+    @IBOutlet var name: UILabel!
+    @IBOutlet var shopImage: UIImageView!
+    @IBOutlet var catchMemo: UILabel!
+    @IBOutlet var openInfo: UILabel!
+    @IBOutlet var address: UILabel!
+
     private var shop: Shop?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let shop else { return }
-        mapView.setMap(lat: shop.lat, lng: shop.lng, name: shop.name)
-        shopDetailTagList.updateTags(shop: shop)
 
+        setupShopBasicInfo(shop)
+        setupMapView(shop)
+        setupDetailTagList(shop)
+        setupScrollView()
+    }
+
+    private func setupShopBasicInfo(_ shop: Shop) {
+        name.text = shop.name
+        catchMemo.text = shop.`catch`
+        openInfo.text = shop.open
+
+        fetchImage(imageUrl: shop.photo.largeImageUrl) { image in
+            DispatchQueue.main.async {
+                self.shopImage.image = image
+            }
+        }
+    }
+
+    private func setupDetailTagList(_ shop: Shop) {
+        shopDetailTagList.updateTags(shop: shop)
+    }
+
+    private func setupMapView(_ shop: Shop) {
+        mapView.setMap(lat: shop.lat, lng: shop.lng, name: shop.name)
+        address.text = shop.address
+    }
+
+    private func setupScrollView() {
         scrollView.contentSize = contentView.frame.size
         scrollView.flashScrollIndicators()
     }
