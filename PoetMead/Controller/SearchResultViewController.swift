@@ -23,6 +23,7 @@ class SearchResultViewController: UIViewController {
     }
 
     private func setupNavigationItem() {
+        navigationItem.title = "検索結果"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }

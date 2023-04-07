@@ -27,10 +27,15 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         guard let shop else { return }
 
+        setupNavigationItem()
         setupShopBasicInfo(shop)
         setupMapView(shop)
         setupDetailTagList(shop)
         setupScrollView()
+    }
+
+    private func setupNavigationItem() {
+        navigationItem.title = "店舗詳細"
     }
 
     private func setupShopBasicInfo(_ shop: Shop) {
