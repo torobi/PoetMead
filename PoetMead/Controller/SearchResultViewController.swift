@@ -60,4 +60,12 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
         vc.setContent(shop: shop)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = searchResultTable.indexPathForSelectedRow {
+            searchResultTable.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
