@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class SearchNavigationViewController: UINavigationController {
-    override public var childForStatusBarStyle: UIViewController? {
+    override var childForStatusBarStyle: UIViewController? {
         return self.visibleViewController
     }
 }

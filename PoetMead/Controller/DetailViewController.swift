@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet var name: UILabel!
     @IBOutlet var shopImage: UIImageView!
+    @IBOutlet var shopImageBackground: UIImageView!
     @IBOutlet var catchMemo: UILabel!
     @IBOutlet var openInfo: UILabel!
     @IBOutlet var address: UILabel!
@@ -50,6 +51,7 @@ class DetailViewController: UIViewController {
         fetchImage(imageUrl: shop.photo.largeImageUrl) { image in
             DispatchQueue.main.async {
                 self.shopImage.image = image
+                self.shopImageBackground.image = image
             }
         }
     }
