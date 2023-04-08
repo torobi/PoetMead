@@ -38,6 +38,10 @@ class DetailViewController: UIViewController {
         navigationItem.title = "店舗詳細"
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     private func setupShopBasicInfo(_ shop: Shop) {
         name.text = shop.name
         catchMemo.text = shop.`catch`

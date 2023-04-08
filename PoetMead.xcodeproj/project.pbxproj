@@ -21,6 +21,7 @@
 		91AFCC9629DAABC700C580FC /* gourmetSearchResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 91AFCC9529DAABC700C580FC /* gourmetSearchResponse.json */; };
 		91AFCC9A29DB2FDC00C580FC /* ShopMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCC9929DB2FDC00C580FC /* ShopMap.swift */; };
 		91AFCC9C29DB2FEF00C580FC /* ShopMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AFCC9B29DB2FEF00C580FC /* ShopMap.xib */; };
+		91C4248E29E1841D00B9BC14 /* SearchNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4248D29E1841D00B9BC14 /* SearchNavigationViewController.swift */; };
 		91FD901A29D175780076AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901929D175780076AFF9 /* AppDelegate.swift */; };
 		91FD901C29D175780076AFF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901B29D175780076AFF9 /* SceneDelegate.swift */; };
 		91FD901E29D175780076AFF9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD901D29D175780076AFF9 /* SearchViewController.swift */; };
@@ -55,6 +56,7 @@
 		91AFCC9529DAABC700C580FC /* gourmetSearchResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gourmetSearchResponse.json; sourceTree = "<group>"; };
 		91AFCC9929DB2FDC00C580FC /* ShopMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMap.swift; sourceTree = "<group>"; };
 		91AFCC9B29DB2FEF00C580FC /* ShopMap.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopMap.xib; sourceTree = "<group>"; };
+		91C4248D29E1841D00B9BC14 /* SearchNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationViewController.swift; sourceTree = "<group>"; };
 		91FD901629D175780076AFF9 /* PoetMead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoetMead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FD901929D175780076AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FD901B29D175780076AFF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				91FD906129D518FD0076AFF9 /* UINibView.swift */,
+				91C4248D29E1841D00B9BC14 /* SearchNavigationViewController.swift */,
 				911BA4EF29DD3D6A00A82C79 /* TagLabel.swift */,
 				9123179C29E06EAA00B72CE3 /* TapAreaExpandButton.swift */,
 				9186E56F29D9EAC700309210 /* FetchImage.swift */,
@@ -368,6 +371,7 @@
 				91AFCC9129DAA8FD00C580FC /* MockGourmetSearchAPI.swift in Sources */,
 				91FD903C29D1A52F0076AFF9 /* APIKeyManager.swift in Sources */,
 				91FD903629D194490076AFF9 /* GourmetSearchAPI.swift in Sources */,
+				91C4248E29E1841D00B9BC14 /* SearchNavigationViewController.swift in Sources */,
 				9123179729DDE58300B72CE3 /* ShopDetailTagList.swift in Sources */,
 				91FD901E29D175780076AFF9 /* SearchViewController.swift in Sources */,
 				9186E56429D89BB800309210 /* LoadingView.swift in Sources */,

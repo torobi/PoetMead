@@ -256,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="2858.7786259541986" y="-3.5211267605633805"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search Navigation View Controller-->
         <scene sceneID="eNJ-AN-KL2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="avN-3i-j7d" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="avN-3i-j7d" customClass="SearchNavigationViewController" customModule="PoetMead" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SKT-aL-1nD">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

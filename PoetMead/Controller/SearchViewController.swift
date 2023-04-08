@@ -49,6 +49,10 @@ class SearchViewController: UIViewController {
       navigationController?.isNavigationBarHidden = false
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+
     private func search(genre: GourmetGenre) {
         appearLoadingView()
 

@@ -26,6 +26,10 @@ class SearchResultViewController: UIViewController {
         navigationItem.title = "検索結果"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate {
