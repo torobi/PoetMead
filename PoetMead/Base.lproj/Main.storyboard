@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79b-Md-XYe" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="996.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1156.6666666666667"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="9oV-eg-oHg" userLabel="imageBackGround">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
@@ -187,14 +187,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3B-AQ-Oh1" customClass="ShopMap" customModule="PoetMead" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="695" width="353" height="240"/>
+                                                <rect key="frame" x="20" y="695" width="353" height="400"/>
                                                 <color key="backgroundColor" systemColor="linkColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="240" id="mTe-5e-NJb"/>
+                                                    <constraint firstAttribute="height" constant="400" id="mTe-5e-NJb"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="東京都渋谷区道玄坂２丁目6-17 TOHOシネマズ渋谷B1F" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snD-tH-crR">
-                                                <rect key="frame" x="20" y="943" width="353" height="33.666666666666629"/>
+                                                <rect key="frame" x="20" y="1103" width="353" height="33.666666666666742"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
