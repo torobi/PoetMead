@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var address: UILabel!
 
     private var shop: Shop?
+    private var srcLat: Double?
+    private var srcLng: Double?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +63,15 @@ class DetailViewController: UIViewController {
     }
 
     private func setupMapView(_ shop: Shop) {
-        mapView.setMap(lat: shop.lat, lng: shop.lng, name: shop.name)
+        guard let srcLat else {
+            print("srcLat is nil")
+            return
+        }
+        guard let srcLng else {
+            print("srcLng is nil")
+            return
+        }
+        mapView.setMap(srcLat: srcLat, srcLng: srcLng, shopLat: shop.lat, shopLng: shop.lng, name: shop.name, delegate: self)
         address.text = shop.address
     }
 
@@ -72,5 +82,20 @@ class DetailViewController: UIViewController {
 
     func setContent(shop: Shop) {
         self.shop = shop
+    }
+
+    func setSrcLocation(_ srcLng: Double, _ srcLat: Double) {
+        self.srcLng = srcLng
+        self.srcLat = srcLat
+    }
+}
+
+extension DetailViewController: MKMapViewDelegate {
+    // MARK: - MapKit delegates
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 4.0
+        return renderer
     }
 }

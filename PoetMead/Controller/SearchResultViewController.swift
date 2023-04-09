@@ -9,11 +9,18 @@ import MapKit
 import UIKit
 
 class SearchResultViewController: UIViewController {
-    private var shops: [Shop] = []
     @IBOutlet var searchResultTable: UITableView!
+    private var shops: [Shop] = []
+    private var srcLng: Double?
+    private var srcLat: Double?
 
     func setShops(_ shops: [Shop]) {
         self.shops = shops
+    }
+
+    func setSrcLocation(_ srcLng: Double, _ srcLat: Double) {
+        self.srcLng = srcLng
+        self.srcLat = srcLat
     }
 
     override func viewDidLoad() {
@@ -56,7 +63,16 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
     }
 
     private func transitionToDetailView(shop: Shop) {
+        guard let srcLat else {
+            print("srcLat is nil")
+            return
+        }
+        guard let srcLng else {
+            print("srcLng is nil")
+            return
+        }
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        vc.setSrcLocation(srcLng, srcLat)
         vc.setContent(shop: shop)
         self.navigationController?.pushViewController(vc, animated: true)
     }
