@@ -11,11 +11,13 @@ import UIKit
 class SearchResultViewController: UIViewController {
     @IBOutlet var searchResultTable: UITableView!
     private var shops: [Shop] = []
+    private var hitCount: Int = 0
     private var srcLng: Double?
     private var srcLat: Double?
 
-    func setShops(_ shops: [Shop]) {
+    func setShops(_ shops: [Shop], _ hitCount: Int) {
         self.shops = shops
+        self.hitCount = hitCount
     }
 
     func setSrcLocation(_ srcLng: Double, _ srcLat: Double) {
@@ -30,7 +32,7 @@ class SearchResultViewController: UIViewController {
     }
 
     private func setupNavigationItem() {
-        navigationItem.title = "検索結果"
+        navigationItem.title = "検索結果: \(hitCount)件"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 

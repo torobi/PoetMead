@@ -89,7 +89,7 @@ class SearchViewController: UIViewController {
     private func transitionToResultView(searchResult: SearchResult) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "result") as! SearchResultViewController
         vc.setSrcLocation(location.longitude, location.latitude)
-        vc.setShops(searchResult.shop)
+        vc.setShops(searchResult.shop, searchResult.resultsAvailable)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
