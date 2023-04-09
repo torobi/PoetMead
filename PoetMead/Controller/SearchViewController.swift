@@ -23,7 +23,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet var rangeSlider: RangeSlider!
 
-    private let searchAPI: GourmetSearchAPIProtocol = MockGourmetSearchAPI()
+    private let searchAPI: GourmetSearchAPIProtocol = GourmetSearchAPI()
     private let location = Location()
     private let loadingView = LoadingView()
 
