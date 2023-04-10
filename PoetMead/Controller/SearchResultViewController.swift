@@ -37,7 +37,7 @@ class SearchResultViewController: UIViewController {
     private func setupNavigationItem() {
         // ナビゲーションバーのtitleに検索結果数を表示
         navigationItem.title = "検索結果: \(hitCount)件"
-        
+
         // 店舗詳細画面のナビゲーションバーの設定
         // 戻るボタンの文字を非表示にする
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

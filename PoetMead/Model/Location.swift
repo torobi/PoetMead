@@ -7,14 +7,10 @@
 
 import CoreLocation
 import Foundation
+import UIKit
 
 /// 位置情報を取得する.
-/// 取得できなかった場合のデフォルトの座標は東京都(35.66934273241242, 139.76927712572368)
-class Location: NSObject, CLLocationManagerDelegate {
-    private var locationManager = CLLocationManager()
-    private (set) var latitude: Double = 35.66934273241242
-    private (set) var longitude: Double = 139.76927712572368
-
+extension SearchViewController: CLLocationManagerDelegate {
     /// 位置情報の取得を開始する
     func startUpdatingLocation() {
         locationManager.delegate = self
@@ -22,7 +18,7 @@ class Location: NSObject, CLLocationManagerDelegate {
         locationManager.allowsBackgroundLocationUpdates = false
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 10
-        locationManager.startUpdatingHeading()
+        locationManager.startUpdatingLocation()
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -37,6 +33,12 @@ class Location: NSObject, CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if !CLLocationManager.locationServicesEnabled() {
+            let alert = UIAlertController(title: "位置情報サービスを\nオンにして下さい", message: "「設定」アプリ ⇒「プライバシー」⇒「位置情報サービス」からオンにできます", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         switch status {
             case .notDetermined:
                 self.locationManager.requestWhenInUseAuthorization()

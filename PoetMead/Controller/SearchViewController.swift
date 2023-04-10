@@ -25,12 +25,17 @@ class SearchViewController: UIViewController {
     @IBOutlet var rangeSlider: RangeSlider!
 
     private let searchAPI: GourmetSearchAPIProtocol = GourmetSearchAPI()
-    private let location = Location()
     private let loadingView = LoadingView()
+
+    var locationManager = CLLocationManager()
+    
+    // 初期値は東京都
+    var latitude: Double = 35.66934273241242
+    var longitude: Double = 139.76927712572368
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        location.startUpdatingLocation()
+        startUpdatingLocation()
         loadingView.setDescription(discription: "検索中…")
         setupNavigationItem()
     }
@@ -61,8 +66,8 @@ class SearchViewController: UIViewController {
         appearLoadingView()
 
         searchAPI.searchRestaurant(
-            latitude: location.latitude,
-            longitude: location.longitude,
+            latitude: latitude,
+            longitude: longitude,
             range: rangeSlider.range,
             genre: genre,
             completionHandler: { searchResult in
@@ -86,13 +91,13 @@ class SearchViewController: UIViewController {
 
     private func appearSearchFailureAlert() {
         let alert = UIAlertController(title: "検索失敗", message: "検索時にエラーが発生しました", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 
     private func transitionToResultView(searchResult: SearchResult) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "result") as! SearchResultViewController
-        vc.setSrcLocation(location.longitude, location.latitude)
+        vc.setSrcLocation(longitude, latitude)
         vc.setShops(searchResult.shop, searchResult.resultsAvailable)
         self.navigationController?.pushViewController(vc, animated: true)
     }
