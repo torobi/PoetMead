@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+/// タップ範囲のみを拡大できるButton
 @IBDesignable class TapAreaExpandButton: UIButton {
     @IBInspectable var dotLineColor: UIColor = .black
 

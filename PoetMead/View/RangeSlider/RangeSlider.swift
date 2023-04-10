@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 検索範囲を指定するスライダー
 class RangeSlider: UINibView {
     private (set) var rangeIndex = 0
 
@@ -23,6 +24,7 @@ class RangeSlider: UINibView {
         updateLabel(rangeIndex: rangeIndex)
     }
 
+    /// スライダーの目盛の設定
     private func setupCells() {
         for i in 0..<cells.count {
             cells[i].layer.cornerRadius = 2

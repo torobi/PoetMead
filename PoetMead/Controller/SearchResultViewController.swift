@@ -8,6 +8,7 @@
 import MapKit
 import UIKit
 
+/// 検索結果画面
 class SearchResultViewController: UIViewController {
     @IBOutlet var searchResultTable: UITableView!
     private var shops: [Shop] = []
@@ -15,11 +16,13 @@ class SearchResultViewController: UIViewController {
     private var srcLng: Double?
     private var srcLat: Double?
 
+    /// 一覧に表示する店舗情報と検索結果数を設定
     func setShops(_ shops: [Shop], _ hitCount: Int) {
         self.shops = shops
         self.hitCount = hitCount
     }
 
+    /// 現在地の座標を設定
     func setSrcLocation(_ srcLng: Double, _ srcLat: Double) {
         self.srcLng = srcLng
         self.srcLat = srcLat
@@ -32,7 +35,11 @@ class SearchResultViewController: UIViewController {
     }
 
     private func setupNavigationItem() {
+        // ナビゲーションバーのtitleに検索結果数を表示
         navigationItem.title = "検索結果: \(hitCount)件"
+        
+        // 店舗詳細画面のナビゲーションバーの設定
+        // 戻るボタンの文字を非表示にする
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 

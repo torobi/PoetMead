@@ -7,6 +7,9 @@
 
 import UIKit
 
+/**
+ 店舗詳細情報のタグ一覧
+ */
 class ShopDetailTagList: UINibView {
     func updateTags(shop: Shop) {
         let areaWidth = self.bounds.size.width
@@ -48,6 +51,10 @@ class ShopDetailTagList: UINibView {
         return label.frame.size.width + TagLabel().tagPadding * 2
     }
 
+    /**
+     そのタグを持つかどうか
+     APIから得たデータから判断する
+     */
     private func isActiveTag(tagName: ShopDetail, shop: Shop) -> Bool {
         switch tagName {
         case .wifi: return shop.wifi == "あり"
@@ -64,6 +71,9 @@ class ShopDetailTagList: UINibView {
         }
     }
 
+    /**
+     タグとして表示される文字列
+     */
     private func getTageText(tagName: ShopDetail) -> String {
         switch tagName {
         case .wifi: return "Wi-Fi"

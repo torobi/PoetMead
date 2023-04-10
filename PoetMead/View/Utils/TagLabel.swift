@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 枠線で囲われたLabel
 class TagLabel: UILabel {
     let tagPadding: CGFloat = 5
 

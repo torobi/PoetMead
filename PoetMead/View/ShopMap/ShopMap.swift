@@ -8,9 +8,17 @@
 import MapKit
 import UIKit
 
+/// 店舗の地図を表示する
 class ShopMap: UINibView {
     @IBOutlet var mapView: MKMapView!
 
+    /// 地図を表示するために必要な情報を設定
+    /// - parameter srcLat: 現在地の緯度
+    /// - parameter srcLng: 現在地の経度
+    /// - parameter shopLat: 店舗の緯度
+    /// - parameter shopLng: 店舗の経度
+    /// - parameter name: 店舗名
+    /// - parameter delegate: ルート描画を行うdelegate
     func setMap(srcLat: Double, srcLng: Double, shopLat: Double, shopLng: Double, name: String, delegate: MKMapViewDelegate) {
         // 目的地のピン追加
         let shopLoc = CLLocation(latitude: shopLat, longitude: shopLng)

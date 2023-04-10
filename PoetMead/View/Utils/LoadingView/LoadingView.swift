@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// ロード画面
 class LoadingView: UINibView {
     @IBOutlet var discriptionLabel: UILabel!
 

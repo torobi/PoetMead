@@ -6,6 +6,8 @@
 //
 
 import Foundation
+
+/// この階層にあるAPIKey.plistに記載したAPIKeyを管理する
 struct APIKeyManager {
     enum APIKeyError: Error {
         case NotFound

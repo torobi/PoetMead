@@ -8,6 +8,7 @@
 import MapKit
 import UIKit
 
+/// 店舗詳細画面
 class DetailViewController: UIViewController {
     @IBOutlet var mapView: ShopMap!
     @IBOutlet var shopDetailTagList: ShopDetailTagList!
@@ -25,6 +26,17 @@ class DetailViewController: UIViewController {
     private var shop: Shop?
     private var srcLat: Double?
     private var srcLng: Double?
+    
+    /// 表示する店舗の情報を設定
+    func setContent(shop: Shop) {
+        self.shop = shop
+    }
+
+    /// 現在地の座標を設定
+    func setSrcLocation(_ srcLng: Double, _ srcLat: Double) {
+        self.srcLng = srcLng
+        self.srcLat = srcLat
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,20 +91,12 @@ class DetailViewController: UIViewController {
         scrollView.contentSize = contentView.frame.size
         scrollView.flashScrollIndicators()
     }
-
-    func setContent(shop: Shop) {
-        self.shop = shop
-    }
-
-    func setSrcLocation(_ srcLng: Double, _ srcLat: Double) {
-        self.srcLng = srcLng
-        self.srcLat = srcLat
-    }
 }
 
 extension DetailViewController: MKMapViewDelegate {
     // MARK: - MapKit delegates
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        // 店舗へのルートを表示
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.blue
         renderer.lineWidth = 4.0

@@ -8,11 +8,14 @@
 import CoreLocation
 import Foundation
 
+/// 位置情報を取得する.
+/// 取得できなかった場合のデフォルトの座標は東京都(35.66934273241242, 139.76927712572368)
 class Location: NSObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
     private (set) var latitude: Double = 35.66934273241242
     private (set) var longitude: Double = 139.76927712572368
 
+    /// 位置情報の取得を開始する
     func startUpdatingLocation() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()

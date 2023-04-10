@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+/// URLから画像取得する.
+/// 取得に失敗した場合はAssetsのnoImageを取得したことになる
 func fetchImage(imageUrl: URL?, fetchCompleteHandler: @escaping (_ image: UIImage) -> Void) {
     guard let imgUrl = imageUrl else {
         fetchCompleteHandler(getNoImage())

@@ -8,6 +8,7 @@
 import CoreLocation
 import UIKit
 
+/// 検索条件入力画面
 class SearchViewController: UIViewController {
     @IBAction func searchRestaurant(_ sender: UIButton) {
         search(genre: .restaurant)
@@ -34,11 +35,13 @@ class SearchViewController: UIViewController {
         setupNavigationItem()
     }
 
+    /// 検索結果画面で表示するnavigationItemの設定
     private func setupNavigationItem() {
+        /// 戻るボタンの文字を非表示にする
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
-    // トップ画面ではNavigationBarを非表示
+    // この画面ではNavigationBarを非表示
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       navigationController?.isNavigationBarHidden = true
@@ -49,6 +52,7 @@ class SearchViewController: UIViewController {
       navigationController?.isNavigationBarHidden = false
     }
 
+    // この画面ではステータスバーの文字色は黒
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }

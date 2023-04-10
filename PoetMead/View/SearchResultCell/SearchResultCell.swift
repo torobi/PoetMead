@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 検索結果一覧のセル
 class SearchResultCell: UITableViewCell {
     @IBOutlet var name: UILabel!
 
@@ -16,6 +17,7 @@ class SearchResultCell: UITableViewCell {
 
     @IBOutlet var catchMemo: UILabel!
 
+    /// セルの内容をセットする
     func setContent(shop: Shop) {
         name.text = shop.name
         setThumbnail(shop.photo.largeImageUrl)
