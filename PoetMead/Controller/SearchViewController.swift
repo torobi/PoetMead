@@ -28,7 +28,7 @@ class SearchViewController: UIViewController {
     private let loadingView = LoadingView()
 
     var locationManager = CLLocationManager()
-    
+
     // 初期値は東京都
     var latitude: Double = 35.66934273241242
     var longitude: Double = 139.76927712572368

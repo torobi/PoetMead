@@ -18,8 +18,7 @@ class ShopMap: UINibView {
     /// - parameter shopLat: 店舗の緯度
     /// - parameter shopLng: 店舗の経度
     /// - parameter name: 店舗名
-    /// - parameter delegate: ルート描画を行うdelegate
-    func setMap(srcLat: Double, srcLng: Double, shopLat: Double, shopLng: Double, name: String, delegate: MKMapViewDelegate) {
+    func setMap(srcLat: Double, srcLng: Double, shopLat: Double, shopLng: Double, name: String) {
         // 目的地のピン追加
         let shopLoc = CLLocation(latitude: shopLat, longitude: shopLng)
         let cr = MKCoordinateRegion(center: shopLoc.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
@@ -57,6 +56,18 @@ class ShopMap: UINibView {
             self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
         }
 
-        self.mapView.delegate = delegate
+        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+        self.mapView.delegate = self
+    }
+}
+
+extension ShopMap: MKMapViewDelegate {
+    // MARK: - MapKit delegates
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        // 店舗へのルートを表示
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 4.0
+        return renderer
     }
 }
